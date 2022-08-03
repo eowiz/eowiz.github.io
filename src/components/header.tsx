@@ -1,5 +1,4 @@
-import { useStaticQuery } from "gatsby";
-import { graphql, PageProps } from "gatsby";
+import { useStaticQuery, graphql, PageProps } from "gatsby";
 import React from "react";
 
 const Header = () => {
