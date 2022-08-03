@@ -1,10 +1,12 @@
 import type { GatsbyConfig } from "gatsby";
+import path from "path";
 
 const config: GatsbyConfig = {
   siteMetadata: {
     title: `Binah`,
     siteUrl: `https://eowiz.github.io`,
   },
+
   // More easily incorporate content into your pages through automatic TypeScript type generation and better GraphQL IntelliSense.
   // If you use VSCode you can also use the GraphQL plugin
   // Learn more at: https://gatsby.dev/graphql-typegen
@@ -49,7 +51,7 @@ const config: GatsbyConfig = {
       resolve: "gatsby-source-filesystem",
       options: {
         name: "blog",
-        path: `${__dirname}/content/blog`,
+        path: path.resolve(__dirname, "content/blog"),
       },
     },
     "gatsby-plugin-root-import",
