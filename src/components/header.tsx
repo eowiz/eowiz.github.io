@@ -1,14 +1,22 @@
-import React from "react"
+import { useStaticQuery } from "gatsby";
+import { graphql, PageProps } from "gatsby";
+import React from "react";
 
-type Props = {
-  siteTitle: string;
-};
+const Header = () => {
+  const { site } = useStaticQuery(graphql`
+    query Header {
+      site {
+        siteMetadata {
+          title
+        }
+      }
+    }
+  `);
 
-const Header = (props: Props) => {
   return (
     <div>
-      <h1>{props.siteTitle}</h1>
-      </div>
+      <h1>{site?.siteMetadata?.title}</h1>
+    </div>
   );
 };
 
