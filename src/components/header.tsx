@@ -1,4 +1,4 @@
-import { useStaticQuery, graphql, PageProps } from "gatsby";
+import { useStaticQuery, graphql, PageProps, Link } from "gatsby";
 import React from "react";
 
 const Header = () => {
@@ -14,7 +14,7 @@ const Header = () => {
 
   return (
     <div>
-      <h1>{site?.siteMetadata?.title}</h1>
+      <Link to="/">{site?.siteMetadata?.title}</Link>
     </div>
   );
 };

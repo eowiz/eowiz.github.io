@@ -3,8 +3,8 @@ import path from "path";
 
 const config: GatsbyConfig = {
   siteMetadata: {
-    title: `Binah`,
-    siteUrl: `https://eowiz.github.io`,
+    title: "Binah",
+    siteUrl: "https://eowiz.github.io",
   },
 
   // More easily incorporate content into your pages through automatic TypeScript type generation and better GraphQL IntelliSense.
@@ -20,7 +20,6 @@ const config: GatsbyConfig = {
       },
     },
     "gatsby-plugin-image",
-    "gatsby-plugin-react-helmet",
     "gatsby-plugin-sitemap",
     {
       resolve: "gatsby-plugin-manifest",
@@ -28,7 +27,19 @@ const config: GatsbyConfig = {
         icon: "src/images/icon.png",
       },
     },
-    "gatsby-transformer-remark",
+    {
+      resolve: "gatsby-transformer-remark",
+      options: {
+        plugins: [
+          {
+            resolve: "gatsby-remark-katex",
+            options: {
+              strict: "ignore",
+            },
+          },
+        ],
+      },
+    },
     "gatsby-plugin-sharp",
     "gatsby-transformer-sharp",
     {

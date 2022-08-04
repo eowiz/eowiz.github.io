@@ -82,12 +82,13 @@ export const createSchemaCustomization: GatsbyNode["createSchemaCustomization"] 
     createTypes(`
       type Markdown implements Node {
         frontmatter: Frontmatter
+        excerpt: String
         fields: Fields
       }
     
       type Frontmatter {
         title: String
-        publishedAt: Date @dateformat
+        published_at: Date @dateformat
       }
 
       type Fields {

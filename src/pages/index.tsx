@@ -1,9 +1,11 @@
 import * as React from "react";
-import { Link } from "gatsby";
+import { graphql, Link } from "gatsby";
+import Header from "components/header";
 
 const IndexPage = () => {
   return (
     <main>
+      <Header />
       <title>Binah</title>
       <h1>タイトル</h1>
       <Link to="/blog">Blog</Link>
