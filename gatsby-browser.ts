@@ -1,1 +1,1 @@
-require("modern-css-reset");
+import "./src/styles/global.css";

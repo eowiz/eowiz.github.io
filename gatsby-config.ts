@@ -72,6 +72,7 @@ const config: GatsbyConfig = {
         siteUrl: "https://eowiz.github.io",
       },
     },
+    "gatsby-plugin-postcss",
   ],
 };
 
