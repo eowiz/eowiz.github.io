@@ -12,6 +12,7 @@ export const Head = (props: HeadProps) => {
       site {
         siteMetadata {
           title
+          description
         }
       }
     }
@@ -24,7 +25,10 @@ export const Head = (props: HeadProps) => {
         {site?.siteMetadata.title}
       </title>
       {props.description && (
-        <meta name="description" content={props.description}></meta>
+        <meta
+          name="description"
+          content={props.description ?? site.siteMetadata.description}
+        ></meta>
       )}
     </>
   );

@@ -4,7 +4,7 @@ import path from "path";
 const config: GatsbyConfig = {
   siteMetadata: {
     title: "Binah",
-    siteUrl: "https://eowiz.github.io",
+    description: "プログラミングや日々のできごとを記録していく。",
   },
 
   // More easily incorporate content into your pages through automatic TypeScript type generation and better GraphQL IntelliSense.
@@ -66,6 +66,12 @@ const config: GatsbyConfig = {
       },
     },
     "gatsby-plugin-root-import",
+    {
+      resolve: "gatsby-plugin-canonical-urls",
+      options: {
+        siteUrl: "https://eowiz.github.io",
+      },
+    },
   ],
 };
 
