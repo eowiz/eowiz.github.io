@@ -30,6 +30,10 @@ export const Head = (props: HeadProps) => {
           content={props.description ?? site.siteMetadata.description}
         ></meta>
       )}
+      <meta
+        name="format-detection"
+        content="email=no,telephone=no,address=no"
+      />
     </>
   );
 };
