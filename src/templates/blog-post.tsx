@@ -21,7 +21,7 @@ const BlogPostTemplate = ({
       <Header />
       <div className="flex max-w-4xl mx-auto my-8">
         <article
-          className="flex flex-col max-w-lg mx-auto"
+          className="flex flex-col max-w-xl mx-auto"
           itemScope
           itemType="http://schema.org/Article"
         >

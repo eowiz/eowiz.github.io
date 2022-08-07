@@ -11,7 +11,7 @@ const Comments = () => {
     script.setAttribute("issue-term", "title");
     script.setAttribute("theme", "github-light");
     script.setAttribute("crossorigin", "anonymous");
-    script.setAttribute("label", "comments");
+    script.setAttribute("label", ":speech_balloon: comments");
     script.async = true;
     const comments = document.getElementById(COMMENTS_ID);
     if (comments) comments.appendChild(script);

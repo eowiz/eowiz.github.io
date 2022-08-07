@@ -5,7 +5,7 @@ const config: GatsbyConfig = {
   siteMetadata: {
     title: "Binah",
     description: "プログラミングや日々のできごとを記録していく。",
-    siteUrl: "https://eowiz.github.io/",
+    siteUrl: "https://eowiz.github.io",
   },
 
   // More easily incorporate content into your pages through automatic TypeScript type generation and better GraphQL IntelliSense.
