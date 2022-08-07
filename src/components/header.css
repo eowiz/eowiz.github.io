@@ -4,12 +4,6 @@
   @apply text-2xl text-slate-200;
 }
 
-.title:hover {
-  font-family: "Bungee Shade", serif;
-  @apply mr-0 my-1.5 px-2 py-2;
-  @apply text-2xl text-white;
-}
-
 .nav {
   font-family: "Raleway", sans-serif;
 }
