@@ -1,0 +1,70 @@
+.title {
+  font-family: "Noto Sans JP", san-serif;
+  @apply text-2xl font-black;
+  @apply mb-2;
+}
+
+.description {
+  @apply text-sm text-gray-600;
+}
+
+.published_at {
+  @apply flex items-center;
+  @apply text-sm font-medium text-gray-800;
+  @apply mb-2;
+}
+
+article h2 {
+  font-family: "Noto Sans JP', san-serif";
+  @apply py-3;
+  @apply text-xl font-bold;
+}
+
+article h3 {
+  font-family: "Noto Sans JP', san-serif";
+  @apply py-3;
+  @apply text-lg font-bold;
+}
+
+article h4 {
+  font-family: "Noto Sans JP', san-serif";
+  @apply py-3;
+  @apply text-base font-bold;
+}
+
+article h5 {
+  font-family: "Noto Sans JP', san-serif";
+  @apply py-3;
+  @apply text-sm font-bold;
+}
+
+article h6 {
+  font-family: "Noto Sans JP', san-serif";
+  @apply py-3;
+  @apply text-xs font-bold;
+}
+
+article ul {
+  @apply list-disc;
+  @apply pl-6;
+}
+
+article :not(li) > ul {
+  @apply py-3;
+}
+
+article ol {
+  @apply list-decimal;
+  @apply pl-6;
+}
+
+article :not(li) > ol {
+  @apply py-3;
+}
+
+article blockquote {
+  position: relative;
+  @apply text-slate-600;
+  @apply border-l-2 border-slate-600;
+  @apply my-3 py-1 pl-3;
+}

@@ -1,3 +1,37 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+body {
+  font-family: "Sawarabi-Mincho", serif;
+}
+
+.gatsby-code-title span {
+  display: inline;
+  position: relative;
+  font-family: Consolas, Monaco, "Andale Mono", "Ubuntu Mono", monospace;
+  color: #eee;
+  background: #777;
+  border-top-left-radius: 0.3em;
+  border-top-right-radius: 0.3em;
+  padding: 3px 0.8rem;
+  top: 0.8rem;
+}
+
+/**
+ * If you only want to use line numbering
+ */
+
+.gatsby-highlight {
+  background-color: #f8f5ec;
+  border-radius: 0.3em;
+  margin: 1em 0;
+  padding: 0.5rem 1rem;
+  overflow: auto;
+}
+
+.gatsby-highlight pre[class*="language-"].line-numbers {
+  padding: 0;
+  padding-left: 2.8em;
+  overflow: initial;
+}

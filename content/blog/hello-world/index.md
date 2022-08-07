@@ -1,11 +1,9 @@
 ---
-title: Hello World
+title: スタイル確認用記事
 published_at: "2022-08-04"
-description: "Hello World"
+description: "これはスタイル確認用の記事です。"
 draft: false
 ---
-
-# h1
 
 ## h2
 
@@ -23,6 +21,8 @@ draft: false
 
 ## 箇条書き
 
+リスト。
+
 - Emacs
   - GNU Emacs
   - GNU Emacs/Cocoa
@@ -32,14 +32,16 @@ draft: false
   - Neovim
 - Visual Studio Code
 
+リスト。
+
 1. Emacs
    1. GNU Emacs
-   1. GNU Emacs/Cocoa
-   1. Aquamacs Emacs
-   1. Emacs Mac Port
-1. Vim
+   2. GNU Emacs/Cocoa
+   3. Aquamacs Emacs
+   4. Emacs Mac Port
+2. Vim
    1. Neovim
-1. Visual Studio Code
+3. Visual Studio Code
 
 ## 引用
 
@@ -67,7 +69,19 @@ draft: false
 
 ## コードブロック
 
-```c
+Hello World。
+
+```c:title=hello_world.c
+#include <stdio.h>
+
+int main(int argc, char **argv) {
+    printf("Hello, World\n");
+
+    return 0;
+}
+```
+
+```c{numberLines: true}
 #include <stdio.h>
 
 int main(int argc, char **argv) {

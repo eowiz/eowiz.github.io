@@ -31,6 +31,17 @@ const config: GatsbyConfig = {
       resolve: "gatsby-transformer-remark",
       options: {
         plugins: [
+          "gatsby-remark-prismjs-title",
+          {
+            resolve: "gatsby-remark-prismjs",
+            options: {
+              classPrefix: "language-",
+              inlineCodeMarker: null,
+              aliases: {},
+              showLineNumbers: false,
+              noInlineHighlight: false,
+            },
+          },
           {
             resolve: "gatsby-remark-katex",
             options: {
@@ -72,7 +83,6 @@ const config: GatsbyConfig = {
         siteUrl: "https://eowiz.github.io",
       },
     },
-    "gatsby-plugin-postcss",
   ],
 };
 

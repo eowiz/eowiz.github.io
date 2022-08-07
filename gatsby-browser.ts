@@ -1,3 +1,12 @@
 import "./src/styles/global.css";
-import "@fontsource/inspiration/400.css";
+import "@fontsource/bungee-shade";
+import "@fontsource/bungee-outline";
 import "@fontsource/raleway/300.css";
+import "@fontsource/noto-sans-jp/400.css";
+import "@fontsource/noto-sans-jp/500.css";
+import "@fontsource/noto-sans-jp/700.css";
+import "@fontsource/noto-sans-jp/900.css";
+import "@fontsource/sawarabi-mincho";
+
+import "styles/prism-theme.css";
+import "prismjs/plugins/line-numbers/prism-line-numbers.css";

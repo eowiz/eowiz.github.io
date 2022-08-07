@@ -6,9 +6,9 @@ const IndexPage = () => {
   return (
     <main>
       <Header />
-      <title>Binah</title>
-      <h1>タイトル</h1>
-      <Link to="/blog">Blog</Link>
+      <div className="flex flex-col max-w-3xl mx-auto py-4">
+        <Link to="/blog">Blog</Link>
+      </div>
     </main>
   );
 };
