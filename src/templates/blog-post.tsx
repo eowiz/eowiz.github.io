@@ -1,6 +1,7 @@
 import { graphql, PageProps } from "gatsby";
 import React from "react";
 import Header from "components/header";
+import Comments from "components/comments";
 import * as head from "components/head";
 import * as articleStyles from "styles/article.module.css";
 import { parse, format } from "date-fns";
@@ -46,6 +47,10 @@ const BlogPostTemplate = ({
             itemProp="articleBody"
             dangerouslySetInnerHTML={{ __html: markdownRemark?.html ?? "" }}
           />
+          <hr className="mt-12 mb-8" />
+          <section itemProp="comment">
+            <Comments />
+          </section>
         </article>
       </div>
     </>
