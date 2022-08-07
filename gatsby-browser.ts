@@ -1,6 +1,6 @@
 import "./src/styles/global.css";
-import "@fontsource/bungee-shade";
-import "@fontsource/bungee-outline";
+import "@fontsource/bungee-shade/400.css";
+import "@fontsource/bungee-outline/400.css";
 import "@fontsource/raleway/300.css";
 import "@fontsource/noto-sans-jp/400.css";
 import "@fontsource/noto-sans-jp/500.css";

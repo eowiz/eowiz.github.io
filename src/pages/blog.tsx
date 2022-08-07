@@ -6,7 +6,7 @@ import * as head from "components/head";
 
 const BlogIndex = ({ data }: PageProps<Queries.BlogIndexQuery>) => {
   const { allMarkdownRemark } = data;
-  console.log(data);
+
   return (
     <>
       <Header></Header>
