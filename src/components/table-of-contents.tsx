@@ -1,8 +1,12 @@
 import React, { useEffect, useMemo } from "react";
 import { useActiveHash } from "react-hooks/use-active-hash";
 
-export default function TableOfContents({ html }: { html: string }) {
+const TableOfContents = ({ html }: { html: string }) => {
   const targetedIds = useMemo(() => {
+    if (typeof document === "undefined") {
+      return [];
+    }
+
     const dummyDOM = document.createElement("html");
     dummyDOM.innerHTML = html;
     const justAnchors = dummyDOM.querySelectorAll("a");
@@ -48,4 +52,6 @@ export default function TableOfContents({ html }: { html: string }) {
       </div>
     </section>
   );
-}
+};
+
+export default TableOfContents;
