@@ -70,18 +70,14 @@ article blockquote {
 }
 
 section[class*="toc"] ul {
-  @apply list-none;
   @apply px-0;
 }
 
 section[class*="toc"] ul li {
-  @apply my-3;
+  @apply pl-2 my-3;
+  @apply border-l-2 border-slate-300;
 }
 
 section[class*="toc"] ul li ul {
-  @apply pl-6;
-}
-
-section[class*="toc"] ul li ul li {
-  @apply list-disc;
+  @apply pl-2;
 }

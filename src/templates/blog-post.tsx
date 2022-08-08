@@ -6,6 +6,7 @@ import * as head from "components/head";
 import * as articleStyles from "styles/article.module.css";
 import { parse, format } from "date-fns";
 import { IoMdCalendar } from "react-icons/io";
+import TableOfContents from "components/table-of-contents";
 require("katex/dist/katex.min.css");
 
 const BlogPostTemplate = ({
@@ -55,17 +56,7 @@ const BlogPostTemplate = ({
             </section>
           </div>
         </article>
-        <section className="toc flex flex-col text-sm py-2">
-          <div className="sticky top-0">
-            <div className="text-lg font-mono font-bold">目次</div>
-            <div
-              className="text-sm font-mono text-gray-500"
-              dangerouslySetInnerHTML={{
-                __html: markdownRemark?.tableOfContents ?? "",
-              }}
-            />
-          </div>
-        </section>
+        <TableOfContents html={markdownRemark?.tableOfContents ?? ""} />
       </div>
     </>
   );

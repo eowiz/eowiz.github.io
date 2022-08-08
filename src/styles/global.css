@@ -35,3 +35,7 @@ body {
   padding-left: 2.8em;
   overflow: initial;
 }
+
+section[class*="toc"] .active {
+  @apply text-blue-500;
+}
