@@ -19,39 +19,53 @@ const BlogPostTemplate = ({
   return (
     <>
       <Header />
-      <div className="flex max-w-4xl mx-auto my-8">
+      <div className="flex max-w-5xl mx-auto my-8 px-4">
+        <div className="mx-auto"></div>
         <article
-          className="flex flex-col max-w-xl mx-auto"
+          className="flex max-w-2xl mx-auto"
           itemScope
           itemType="http://schema.org/Article"
         >
-          <h1 className={articleStyles.title} itemProp="headline">
-            {markdownRemark?.frontmatter?.title}
-          </h1>
-          {publishedAt && (
-            <section className={articleStyles.published_at}>
-              <IoMdCalendar className="mr-1" />
-              {format(publishedAt, "yyyy月MM月dd日")}
-            </section>
-          )}
-          {markdownRemark?.frontmatter?.description && (
+          <div className="flex flex-col pr-3 max-w-2xl">
+            <h1 className={articleStyles.title} itemProp="headline">
+              {markdownRemark?.frontmatter?.title}
+            </h1>
+            {publishedAt && (
+              <section className={articleStyles.published_at}>
+                <IoMdCalendar className="mr-1" />
+                {format(publishedAt, "yyyy月MM月dd日")}
+              </section>
+            )}
+            {markdownRemark?.frontmatter?.description && (
+              <section
+                className={articleStyles?.description}
+                itemProp="backstory"
+              >
+                {markdownRemark.frontmatter.description}
+              </section>
+            )}
             <section
-              className={articleStyles?.description}
-              itemProp="backstory"
-            >
-              {markdownRemark.frontmatter.description}
+              className="text-sm mt-3"
+              itemProp="articleBody"
+              dangerouslySetInnerHTML={{ __html: markdownRemark?.html ?? "" }}
+            />
+            <hr className="mt-12 mb-8" />
+            <section itemProp="comment">
+              <Comments />
             </section>
-          )}
-          <section
-            className="text-sm mt-3"
-            itemProp="articleBody"
-            dangerouslySetInnerHTML={{ __html: markdownRemark?.html ?? "" }}
-          />
-          <hr className="mt-12 mb-8" />
-          <section itemProp="comment">
-            <Comments />
-          </section>
+          </div>
         </article>
+        <section className="toc flex flex-col text-sm py-2">
+          <div className="sticky top-0">
+            <div className="text-lg font-mono font-bold">目次</div>
+            <div
+              className="text-sm font-mono text-gray-500"
+              dangerouslySetInnerHTML={{
+                __html: markdownRemark?.tableOfContents ?? "",
+              }}
+            />
+          </div>
+        </section>
       </div>
     </>
   );
@@ -78,6 +92,7 @@ export const query = graphql`
       id
       html
       excerpt(truncate: true)
+      tableOfContents(maxDepth: 3)
       frontmatter {
         title
         description

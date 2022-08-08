@@ -49,6 +49,13 @@ const config: GatsbyConfig = {
               strict: "ignore",
             },
           },
+          {
+            resolve: "gatsby-remark-autolink-headers",
+            options: {
+              icon: false,
+              maintainCase: false,
+            },
+          },
         ],
       },
     },
