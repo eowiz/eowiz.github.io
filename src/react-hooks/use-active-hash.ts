@@ -1,3 +1,5 @@
+// see: https://stackoverflow.com/questions/60833907/gatsby-syncing-the-table-of-contents-with-the-page-scroll-and-style-the-active-l
+
 import { useEffect, useState } from "react";
 
 export const useActiveHash = (itemIds: string[], rootMargin = undefined) => {

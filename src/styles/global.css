@@ -37,5 +37,9 @@ body {
 }
 
 section[class*="toc"] .active {
-  @apply text-blue-500;
+  @apply text-slate-600;
+}
+
+.active {
+  @apply border-slate-600;
 }

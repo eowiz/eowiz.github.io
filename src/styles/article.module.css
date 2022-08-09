@@ -75,9 +75,17 @@ section[class*="toc"] ul {
 
 section[class*="toc"] ul li {
   @apply pl-2 my-3;
-  @apply border-l-2 border-slate-300;
 }
 
 section[class*="toc"] ul li ul {
   @apply pl-2;
+}
+
+section[class*="toc"] a {
+  @apply pl-2;
+  @apply border-l-2 border-slate-300;
+}
+
+section[class*="toc"] a[class*="active"] {
+  @apply border-slate-600;
 }

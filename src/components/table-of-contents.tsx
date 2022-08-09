@@ -1,3 +1,5 @@
+// see: https://stackoverflow.com/questions/60833907/gatsby-syncing-the-table-of-contents-with-the-page-scroll-and-style-the-active-l
+
 import React, { useEffect, useMemo } from "react";
 import { useActiveHash } from "react-hooks/use-active-hash";
 
@@ -42,9 +44,9 @@ const TableOfContents = ({ html }: { html: string }) => {
   return (
     <section className="toc flex flex-col text-sm py-2">
       <div className="sticky top-0">
-        <div className="text-lg font-mono font-bold">目次</div>
+        <h2 className="text-lg font-mono font-bold">目次</h2>
         <div
-          className="text-sm font-mono text-gray-500"
+          className="text-sm font-mono text-gray-400"
           dangerouslySetInnerHTML={{
             __html: html,
           }}

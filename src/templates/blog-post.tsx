@@ -83,7 +83,7 @@ export const query = graphql`
       id
       html
       excerpt(truncate: true)
-      tableOfContents(maxDepth: 3)
+      tableOfContents(maxDepth: 4)
       frontmatter {
         title
         description
