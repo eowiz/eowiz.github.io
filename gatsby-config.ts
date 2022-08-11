@@ -7,7 +7,7 @@ const config: GatsbyConfig = {
     description: "プログラミングや日々のできごとを記録していく。",
     siteUrl: "https://eowiz.github.io",
   },
-
+  trailingSlash: "never",
   // More easily incorporate content into your pages through automatic TypeScript type generation and better GraphQL IntelliSense.
   // If you use VSCode you can also use the GraphQL plugin
   // Learn more at: https://gatsby.dev/graphql-typegen

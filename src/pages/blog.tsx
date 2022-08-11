@@ -14,7 +14,7 @@ const BlogIndex = ({ data }: PageProps<Queries.BlogIndexQuery>) => {
       {allMarkdownRemark.nodes.map(
         (node) =>
           node.fields?.slug && (
-            <Link to={node.fields.slug ?? ""} key={node.fields.slug}>
+            <Link to={node.fields.slug} key={node.fields.slug}>
               <div>{node.frontmatter?.title}</div>
             </Link>
           )
