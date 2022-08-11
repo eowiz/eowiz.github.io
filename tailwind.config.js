@@ -6,6 +6,9 @@ module.exports = {
     "./src/templates/**/*.{js,jsx,ts,tsx}",
   ],
   theme: {
+    fontFamily: {
+      sans: ["Noto Sans JP"],
+    },
     extend: {},
   },
   plugins: [],

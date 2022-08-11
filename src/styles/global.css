@@ -6,6 +6,10 @@ body {
   font-family: "Sawarabi-Mincho", serif;
 }
 
+.font-railway {
+  font-family: "Raleway", sans-serif;
+}
+
 .gatsby-code-title span {
   display: inline;
   position: relative;
@@ -38,4 +42,8 @@ body {
 
 section[class*="toc"] .active {
   @apply text-slate-600;
+}
+
+footer {
+  font-family: "Raleway", sans-serif;
 }

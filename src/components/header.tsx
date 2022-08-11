@@ -27,7 +27,7 @@ const Header = () => {
   return (
     <header className="bg-slate-700">
       <div className="flex max-w-3xl mx-auto">
-        <Link to="/" className="title">
+        <Link to="/blog" className="title">
           {site?.siteMetadata?.title}
         </Link>
         <nav className="nav my-auto ml-3">
