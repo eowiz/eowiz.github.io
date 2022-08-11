@@ -44,9 +44,9 @@ const TableOfContents = ({ html }: { html: string }) => {
   return (
     <section className="toc flex flex-col text-sm py-2">
       <div className="sticky top-0">
-        <h2 className="text-lg font-mono font-bold">目次</h2>
+        <h2 className="text-lg font-sans font-bold">目次</h2>
         <div
-          className="text-sm font-mono text-gray-400"
+          className="text-xs font-sans text-gray-400"
           dangerouslySetInnerHTML={{
             __html: html,
           }}
