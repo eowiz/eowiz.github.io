@@ -7,6 +7,7 @@ import * as articleStyles from "styles/article.module.css";
 import { parse, format } from "date-fns";
 import { IoMdCalendar } from "react-icons/io";
 import TableOfContents from "components/table-of-contents";
+import Footer from "components/footer";
 require("katex/dist/katex.min.css");
 
 const BlogPostTemplate = ({
@@ -22,13 +23,9 @@ const BlogPostTemplate = ({
       <Header />
       <div className="flex max-w-5xl mx-auto my-8 px-4">
         <div className="mx-auto"></div>
-        <article
-          className="flex max-w-2xl mx-auto"
-          itemScope
-          itemType="http://schema.org/Article"
-        >
+        <article className="flex max-w-2xl mx-auto">
           <div className="flex flex-col pr-3 max-w-2xl">
-            <h1 className={articleStyles.title} itemProp="headline">
+            <h1 className={articleStyles.title}>
               {markdownRemark?.frontmatter?.title}
             </h1>
             {publishedAt && (
@@ -47,17 +44,17 @@ const BlogPostTemplate = ({
             )}
             <section
               className="text-sm mt-3"
-              itemProp="articleBody"
               dangerouslySetInnerHTML={{ __html: markdownRemark?.html ?? "" }}
             />
             <hr className="mt-12 mb-8" />
-            <section itemProp="comment">
+            <section>
               <Comments />
             </section>
           </div>
         </article>
         <TableOfContents html={markdownRemark?.tableOfContents ?? ""} />
       </div>
+      <Footer />
     </>
   );
 };

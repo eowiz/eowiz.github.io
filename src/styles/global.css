@@ -39,7 +39,3 @@ body {
 section[class*="toc"] .active {
   @apply text-slate-600;
 }
-
-.active {
-  @apply border-slate-600;
-}

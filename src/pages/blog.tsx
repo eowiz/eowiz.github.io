@@ -3,22 +3,28 @@ import { Link, graphql, PageProps, useStaticQuery } from "gatsby";
 
 import Header from "components/header";
 import * as head from "components/head";
+import Footer from "components/footer";
 
 const BlogIndex = ({ data }: PageProps<Queries.BlogIndexQuery>) => {
   const { allMarkdownRemark } = data;
 
   return (
     <>
-      <Header></Header>
-      <div>記事</div>
-      {allMarkdownRemark.nodes.map(
-        (node) =>
-          node.fields?.slug && (
-            <Link to={node.fields.slug} key={node.fields.slug}>
-              <div>{node.frontmatter?.title}</div>
-            </Link>
-          )
-      )}
+      <div className="flex flex-col h-screen">
+        <Header></Header>
+        <main className="mb-auto">
+          <div>記事</div>
+          {allMarkdownRemark.nodes.map(
+            (node) =>
+              node.fields?.slug && (
+                <Link to={node.fields.slug} key={node.fields.slug}>
+                  <div>{node.frontmatter?.title}</div>
+                </Link>
+              )
+          )}
+        </main>
+        <Footer />
+      </div>
     </>
   );
 };
