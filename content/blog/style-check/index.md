@@ -99,4 +99,9 @@ $f(x) = x^2 + 2x + 1$
 
 ## iframely
 
-<div class="iframely-embed"><div class="iframely-responsive" style="height: 140px; padding-bottom: 0;"><a href="https://iframely.com/try" data-iframely-url="//iframely.net/y22G6X8"></a></div></div>
+<div class="iframely-embed">
+  <div class="iframely-responsive" style="height: 140px padding-bottom: 0;">
+    <a href="https://iframely.com/try" data-iframely-url="//iframely.net/y22G6X8?omit_script=1&iframe=1">
+    </a>
+  </div>
+</div>

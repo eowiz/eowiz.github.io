@@ -21,7 +21,6 @@ const BlogPostTemplate = ({
 
   return (
     <>
-      <Iframely />
       <Header />
       <div className="flex max-w-5xl mx-auto my-8 px-4">
         <div className="mx-auto"></div>
@@ -57,6 +56,7 @@ const BlogPostTemplate = ({
         <TableOfContents html={markdownRemark?.tableOfContents ?? ""} />
       </div>
       <Footer />
+      <Iframely />
     </>
   );
 };
@@ -70,7 +70,7 @@ export const Head = ({ data }: PageProps<Queries.BlogPostTemplateQuery>) => {
         title={markdownRemark?.frontmatter?.title ?? ""}
         description={markdownRemark?.excerpt ?? ""}
       />
-      <script type="text/javascript" src="//cdn.iframe.ly/embed.js" />
+      <script async type="text/javascript" src="//cdn.iframe.ly/embed.js" />
     </>
   );
 };
