@@ -12,7 +12,7 @@ const Iframely = () => {
     }
   }, []);
 
-  return null;
+  return <></>;
 };
 
 export default Iframely;
