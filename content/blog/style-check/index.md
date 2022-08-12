@@ -96,3 +96,7 @@ int main(int argc, char **argv) {
 $f(x) = x^2 + 2x + 1$
 
 ## ながあああああああああああああい
+
+## iframely
+
+<div class="iframely-embed"><div class="iframely-responsive" style="height: 140px; padding-bottom: 0;"><a href="https://iframely.com/try" data-iframely-url="//iframely.net/y22G6X8"></a></div></div>

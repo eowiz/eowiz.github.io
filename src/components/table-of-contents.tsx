@@ -30,8 +30,6 @@ const TableOfContents = ({ html }: { html: string }) => {
       a.classList.remove("active");
     });
 
-    console.log(activeHash);
-
     const activeLink = document.querySelectorAll(
       `.toc a[href$="${"#" + encodeURI(activeHash)}"]`
     );

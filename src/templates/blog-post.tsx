@@ -8,6 +8,7 @@ import { parse, format } from "date-fns";
 import { IoMdCalendar } from "react-icons/io";
 import TableOfContents from "components/table-of-contents";
 import Footer from "components/footer";
+import Iframely from "components/iframely";
 require("katex/dist/katex.min.css");
 
 const BlogPostTemplate = ({
@@ -20,6 +21,7 @@ const BlogPostTemplate = ({
 
   return (
     <>
+      <Iframely />
       <Header />
       <div className="flex max-w-5xl mx-auto my-8 px-4">
         <div className="mx-auto"></div>
@@ -68,6 +70,7 @@ export const Head = ({ data }: PageProps<Queries.BlogPostTemplateQuery>) => {
         title={markdownRemark?.frontmatter?.title ?? ""}
         description={markdownRemark?.excerpt ?? ""}
       />
+      <script type="text/javascript" src="//cdn.iframe.ly/embed.js" />
     </>
   );
 };
