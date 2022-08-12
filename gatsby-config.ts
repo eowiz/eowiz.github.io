@@ -15,9 +15,12 @@ const config: GatsbyConfig = {
   plugins: [
     "gatsby-plugin-postcss",
     {
-      resolve: "gatsby-plugin-google-analytics",
+      resolve: "gatsby-plugin-google-gtag",
       options: {
-        trackingId: "G-B2JDFFF32X",
+        trackingIds: ["G-B2JDFFF32X"],
+        pluginConfig: {
+          head: true,
+        },
       },
     },
     "gatsby-plugin-image",
