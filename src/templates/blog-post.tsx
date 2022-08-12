@@ -22,10 +22,10 @@ const BlogPostTemplate = ({
   return (
     <>
       <Header />
-      <div className="flex max-w-5xl mx-auto my-8 px-4">
+      <div className="flex max-w-5xl w-full mx-auto my-8 px-4">
         <div className="mx-auto"></div>
-        <article className="flex max-w-2xl mx-auto">
-          <div className="flex flex-col pr-3 max-w-2xl">
+        <article className="flex w-full max-w-2xl mx-auto">
+          <div className="flex flex-col pr-3 w-full max-w-2xl">
             <h1 className={articleStyles.title}>
               {markdownRemark?.frontmatter?.title}
             </h1>

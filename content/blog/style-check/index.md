@@ -1,7 +1,8 @@
 ---
 title: スタイル確認用記事
-published_at: "2022-08-04"
 description: "これはスタイル確認用の記事です。"
+category: []
+published_at: "2022-08-04"
 draft: false
 ---
 
