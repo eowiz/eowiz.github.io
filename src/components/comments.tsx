@@ -15,11 +15,8 @@ const Comments = () => {
     script.async = true;
     const comments = document.getElementById(COMMENTS_ID);
     if (comments) comments.appendChild(script);
-    return () => {
-      const comments = document.getElementById(COMMENTS_ID);
-      if (comments) comments.innerHTML = "";
-    };
   }, []);
+
   return <div id={COMMENTS_ID} />;
 };
 
