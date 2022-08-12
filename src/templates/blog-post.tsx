@@ -70,7 +70,6 @@ export const Head = ({ data }: PageProps<Queries.BlogPostTemplateQuery>) => {
         title={markdownRemark?.frontmatter?.title ?? ""}
         description={markdownRemark?.excerpt ?? ""}
       />
-      <script async type="text/javascript" src="//cdn.iframe.ly/embed.js" />
     </>
   );
 };
