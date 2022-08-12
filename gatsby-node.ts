@@ -48,7 +48,7 @@ export const createPages: GatsbyNode["createPages"] = async ({
     }
 
     createPage({
-      path: `/blog/${slug}`,
+      path: `/blog/${slug.replace("/", "")}`,
       component: path.resolve(__dirname, "./src/templates/blog-post.tsx"),
       context: {
         id,
