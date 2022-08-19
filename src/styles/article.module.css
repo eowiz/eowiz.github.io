@@ -74,6 +74,10 @@ article p {
   @apply indent-3;
 }
 
+article a {
+  @apply text-blue-600;
+}
+
 section[class*="toc"] ul {
   @apply px-0;
 }
