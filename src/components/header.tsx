@@ -1,4 +1,5 @@
-import { useStaticQuery, graphql, PageProps, Link } from "gatsby";
+import { useStaticQuery, graphql } from "gatsby";
+import Link from "gatsby-link";
 import * as React from "react";
 require("./header.css");
 
