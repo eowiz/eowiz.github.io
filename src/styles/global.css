@@ -2,12 +2,15 @@
 @tailwind components;
 @tailwind utilities;
 
-body {
-  font-family: "Sawarabi-Mincho", serif;
+:root {
+  --color-primary: rgb(51 65 85);
+
+  --color-header-text: rgb(203 213 225);
+  --color-link: rgb(37 99 235);
 }
 
-.font-railway {
-  font-family: "Raleway", sans-serif;
+body {
+  font-family: "M PLUS Rounded 1c", sans-serif;
 }
 
 .gatsby-code-title span {
@@ -42,12 +45,4 @@ body {
 
 section[class*="toc"] .active {
   @apply text-slate-600;
-}
-
-footer {
-  font-family: "Raleway", sans-serif;
-}
-
-.iframely-embed {
-  @apply my-6;
 }

@@ -1,7 +1,8 @@
 import { useStaticQuery, graphql } from "gatsby";
 import Link from "gatsby-link";
 import * as React from "react";
-require("./header.css");
+// require("./header.css");
+import "styles/header.css";
 
 const Header = () => {
   const { site } = useStaticQuery(graphql`
@@ -26,21 +27,16 @@ const Header = () => {
   ];
 
   return (
-    <header className="bg-slate-700">
-      <div className="flex max-w-3xl mx-auto">
+    <header>
+      <div className="wrap">
         <Link to="/blog" className="title">
           {site?.siteMetadata?.title}
         </Link>
-        <nav className="nav my-auto ml-3">
-          <ul className="flex text-sm">
+        <nav>
+          <ul className="flex">
             {navItems.map((item) => (
-              <li className="mr-3" key={item.href}>
-                <Link
-                  to={item.href}
-                  className="inline-block px-3 text-slate-300 hover:text-white"
-                >
-                  {item.text}
-                </Link>
+              <li key={item.href}>
+                <Link to={item.href}>{item.text}</Link>
               </li>
             ))}
           </ul>

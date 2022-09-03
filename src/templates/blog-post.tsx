@@ -9,6 +9,8 @@ import { IoMdCalendar } from "react-icons/io";
 import TableOfContents from "components/table-of-contents";
 import Footer from "components/footer";
 import Iframely from "components/iframely";
+
+import "styles/iframely.css";
 require("katex/dist/katex.min.css");
 
 const BlogPostTemplate = ({
