@@ -1,4 +1,3 @@
-import { Script } from "gatsby";
 import React, { useEffect } from "react";
 
 const COMMENTS_ID = "comments-container";

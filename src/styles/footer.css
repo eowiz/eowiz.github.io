@@ -1,0 +1,12 @@
+footer {
+  display: flex;
+  flex-direction: column;
+  padding: 1.5rem 0.5rem;
+  background-color: rgb(51 65 85);
+
+  & .copyright {
+    margin-left: auto;
+    margin-right: auto;
+    color: rgb(241 245 249);
+  }
+}

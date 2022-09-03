@@ -1,19 +1,20 @@
 import { graphql, useStaticQuery } from "gatsby";
 import * as React from "react";
+import "styles/footer.css";
 
 const Footer = () => {
   const { site } = useStaticQuery(graphql`
     query Footer {
       site {
         siteMetadata {
-          title
+          copyright
         }
       }
     }
   `);
   return (
-    <footer className="flex flex-col bg-slate-700 py-8 px-4">
-      <div className="mx-auto text-slate-100">&copy; 2022 eowiz</div>
+    <footer>
+      <div className="copyright">&copy; 2022 {site.siteMetadata.copyright}</div>
     </footer>
   );
 };

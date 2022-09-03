@@ -6,6 +6,7 @@ const config: GatsbyConfig = {
     title: "Binah",
     description: "プログラミングや日々のできごとを記録していく。",
     siteUrl: "https://eowiz.github.io",
+    copyright: "eowiz",
   },
   trailingSlash: "never",
   // More easily incorporate content into your pages through automatic TypeScript type generation and better GraphQL IntelliSense.
