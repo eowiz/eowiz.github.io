@@ -2,6 +2,7 @@
 
 import React, { useEffect, useMemo } from "react";
 import { useActiveHash } from "react-hooks/use-active-hash";
+import "styles/table-of-contents.css";
 
 const TableOfContents = ({ html }: { html: string }) => {
   const targetedIds = useMemo(() => {
@@ -42,7 +43,6 @@ const TableOfContents = ({ html }: { html: string }) => {
   return (
     <section className="toc flex flex-col text-sm py-2">
       <div className="sticky top-0">
-        <h2 className="text-lg font-sans font-bold">目次</h2>
         <div
           className="text-xs font-sans text-gray-400"
           dangerouslySetInnerHTML={{

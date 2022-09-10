@@ -1,0 +1,101 @@
+.markdown {
+  & * {
+    line-height: 1.8;
+  }
+
+  & .title {
+    font-family: "Noto Sans JP", san-serif;
+    font-size: 1.8rem;
+    font-weight: 600;
+  }
+
+  & .published_at {
+    display: flex;
+    align-items: center;
+    font-size: 0.925rem;
+    color: rgb(71 85 105);
+
+    & .icon {
+      margin-right: 0.25rem;
+    }
+  }
+
+  & .description {
+    font-size: 0.925rem;
+    color: rgb(71 85 105);
+  }
+
+  & h2 {
+    font-family: "Noto Sans JP", san-serif;
+    font-size: 1.2rem;
+    font-weight: 700;
+    margin-top: 1.2rem;
+  }
+
+  & h3 {
+    font-family: "Noto Sans JP", san-serif;
+    font-size: 1rem;
+    font-weight: 700;
+    margin-top: 1rem;
+  }
+
+  & h4 {
+    font-family: "Noto Sans JP", san-serif;
+    font-weight: 700;
+    margin-top: 1rem;
+  }
+
+  & h5 {
+    font-family: "Noto Sans JP", san-serif;
+    font-weight: 700;
+    margin-top: 1rem;
+  }
+
+  & h6 {
+    font-family: "Noto Sans JP", san-serif;
+    font-weight: 700;
+    margin-top: 1rem;
+  }
+
+  & strong {
+    font-weight: 700;
+  }
+
+  & p {
+    text-indent: 0.75rem;
+    margin-top: 0.65rem;
+  }
+
+  & a {
+    color: var(--color-link);
+  }
+
+  & ul {
+    list-style-type: disc;
+    padding-left: 2rem;
+  }
+
+  & :not(li) > ul {
+    margin-top: 0.65rem;
+  }
+
+  & ol {
+    list-style-type: decimal;
+    padding-left: 2rem;
+  }
+
+  & :not(li) > ol {
+    margin-top: 0.65rem;
+  }
+
+  & blockquote {
+    position: relative;
+    color: rgb(71 85 105);
+    border-left: solid rgb(71 85 105);
+    padding-left: 0.8rem;
+
+    & * {
+      text-indent: 0;
+    }
+  }
+}

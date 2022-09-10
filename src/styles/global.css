@@ -13,6 +13,10 @@ body {
   font-family: "M PLUS Rounded 1c", sans-serif;
 }
 
+.font-railway {
+  font-family: "Raleway", sans-serif;
+}
+
 .gatsby-code-title span {
   display: inline;
   position: relative;
