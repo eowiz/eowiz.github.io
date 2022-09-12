@@ -1,7 +1,6 @@
 import { useStaticQuery, graphql } from "gatsby";
 import Link from "gatsby-link";
 import * as React from "react";
-// require("./header.css");
 import "styles/header.css";
 
 const Header = () => {

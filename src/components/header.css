@@ -1,9 +1,0 @@
-.title {
-  font-family: "Bungee Outline", serif;
-  @apply mr-3 my-1.5 px-2 py-2;
-  @apply text-2xl text-white;
-}
-
-.nav {
-  font-family: "Raleway", sans-serif;
-}
