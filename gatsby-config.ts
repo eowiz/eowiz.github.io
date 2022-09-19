@@ -3,7 +3,7 @@ import path from "path";
 
 const config: GatsbyConfig = {
   siteMetadata: {
-    title: "Binah",
+    title: "far from it",
     description: "プログラミングや日々のできごとを記録していく。",
     siteUrl: "https://eowiz.github.io",
     copyright: "eowiz",
