@@ -1,5 +1,6 @@
 baseURL = 'https://eowiz.github.io/'
-languageCode = 'ja'
+languageCode = 'ja-JP'
+defaultContentLanguage = 'ja'
 title = 'a.k.a.'
 theme = "PaperMod"
 
