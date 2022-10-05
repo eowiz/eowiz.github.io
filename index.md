@@ -1,6 +1,7 @@
 ---
-layout: layouts/main.njk
+layout: layouts/main.tsx
 ---
+
 # Welcome to my website
 
 This is my first page using **Lume,**
