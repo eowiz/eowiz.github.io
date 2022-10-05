@@ -1,0 +1,35 @@
+---
+layout: layouts/main.njk
+---
+<main class="post flex max-w-5xl mx-auto px-6 my-8">
+  <article class="max-w-2xl mx-auto">
+    <section class="mb-6">
+      <h1>{{ title }}</h1>
+      <div class="flex mb-2 items-center text-gray-800">
+        <span class="ion-calendar mr-2"></span>
+        <span>{{ date | date("yyyy年MM月dd日") }}</span>
+      </div>
+    </section>
+    <section class="mb-6">
+      {{ content | safe }}
+    </section>
+    <section>
+      <div class="relative flex py-5 items-center">
+        <div class="flex-grow border-t border-slate-400"></div>
+        <span class="flex-shrink mx-4 text-slate-700">Comments</span>
+        <div class="flex-grow border-t border-slate-400"></div>
+      </div>
+      {{ comp.comments() | safe }}
+    </section>
+  </article>
+  <aside class="toc sticky top-0 text-sm mb-auto pl-4 py-2 hidden lg:flex lg:flex-col">
+    <div class="text-lg font-bold">目次</div>
+    <div class="text-sm text-gray-400">
+      {{ comp.toc({ toc: toc }) | safe }}
+    </div>
+  </aside>
+  <script src="/js/toc.js">
+</main>
+
+
+

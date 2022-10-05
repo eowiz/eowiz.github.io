@@ -1,0 +1,6 @@
+@import "css/code.css";
+@import "css/font.css";
+
+body {
+    @apply font-body;
+}

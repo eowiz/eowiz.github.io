@@ -1,0 +1,41 @@
+.post {
+    @apply leading-relaxed;
+    
+    & h1, h2, h3, h4, h5, h6 {
+        @apply font-heading font-bold;
+        @apply mb-3;
+    }
+
+    & h1 { @apply text-3xl; }
+    & h2 { @apply text-2xl; }
+    & h3 { @apply text-xl; }
+    & h4 { @apply text-lg; }
+    & h5 { @apply text-base; }
+    & h5 { @apply text-sm; }
+
+    & p { @apply my-4; }
+    & strong { @apply font-bold; }
+    & p > a { @apply text-blue-600; }
+    & p > a:hover { @apply underline; }
+
+    & ul { @apply list-disc; @apply pl-6; }
+    & :not(li) > ul { @apply py-3; }
+
+    & ol { @apply list-decimal; @apply pl-6; }
+    & :not(li) > ol { @apply py-3; }
+
+    & blockquote {
+        @apply relative;
+        @apply text-slate-600;
+        @apply border-l-2 border-slate-600;
+        @apply pl-3;
+    }
+
+    & .toc {
+        & ul { @apply list-none; }
+        & li { @apply py-1; }
+        & :not(li) > ul { @apply pl-1; }
+
+        & a[class*="active"] { @apply border-slate-600 text-slate-600; }
+    }
+}

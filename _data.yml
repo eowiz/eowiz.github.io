@@ -1,0 +1,11 @@
+layout: layouts/main.njk
+
+siteMetadata:
+  title: skhole
+  copyright: eowiz
+
+header:
+  - name: Blog
+    link: /blog
+  - name: About
+    link: /about
