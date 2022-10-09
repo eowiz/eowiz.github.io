@@ -14,7 +14,11 @@ export default ({ title, siteMetadata, children, comp }) => (
     </head>
     <body>
       <div className="flex flex-col h-screen justify-between">
-        <div dangerouslySetInnerHTML={{ __html: comp.header() }}></div>
+        <div
+          dangerouslySetInnerHTML={{
+            __html: comp.header(),
+          }}
+        ></div>
         {children}
         <div dangerouslySetInnerHTML={{ __html: comp.footer() }}></div>
       </div>
