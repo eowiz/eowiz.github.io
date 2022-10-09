@@ -1,8 +1,14 @@
 import { format } from "https://deno.land/std@0.158.0/datetime/mod.ts";
+import type { PageData } from "lume/core.ts";
+import type { Data } from "../../_data.ts";
+
+export interface PostPageData extends PageData, Data {
+  date: Date;
+}
 
 export const layout = "layouts/main.tsx";
 
-export default ({ title, date, children, comp, toc }) => (
+export default ({ title, date, children, comp, toc }: PostPageData) => (
   <main className="post flex max-w-5xl mx-auto px-6 my-8">
     <article className="max-w-2xl mx-auto">
       <section className="mb-6">

@@ -4,7 +4,7 @@ export default () => (
     repo="eowiz/eowiz.github.io"
     issue-term="title"
     theme="github-light"
-    crossorigin="anonymous"
+    crossOrigin="anonymous"
     label=":speech_balloon: comments"
     async
   ></script>

@@ -1,4 +1,9 @@
-export default ({ siteMetadata, header }) => (
+import type { PageData } from "lume/core.ts";
+import type { Data } from "../_data.ts";
+
+export interface HeaderPageData extends PageData, Data {}
+
+export default ({ siteMetadata, header }: HeaderPageData) => (
   <header className="bg-slate-700 px-3 py-4">
     <div className="flex max-w-3xl mx-auto">
       <a href="/">
@@ -11,6 +16,7 @@ export default ({ siteMetadata, header }) => (
           <a
             href={item.link}
             className="text-slate-300 hover:text-white py-auto"
+            key={item.link}
           >
             <div className="font-raleway font-light mr-8 text-lg">
               {item.name}
