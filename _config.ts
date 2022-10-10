@@ -1,4 +1,6 @@
 import lume from "lume/mod.ts";
+import resolveUrls from "lume/plugins/resolve_urls.ts";
+import slugifyUrls from "lume/plugins/slugify_urls.ts";
 import date from "lume/plugins/date.ts";
 import postcss from "lume/plugins/postcss.ts";
 import windi from "lume/plugins/windi_css.ts";
@@ -16,6 +18,7 @@ import mark from "https://jspm.dev/markdown-it-mark";
 import deflist from "https://jspm.dev/markdown-it-deflist";
 import container from "https://jspm.dev/markdown-it-container";
 import MarkdonwIt from "https://jspm.dev/markdown-it";
+import katex from "lume/plugins/katex.ts";
 
 // syntax highlight
 import prism from "lume/plugins/prism.ts";
@@ -75,6 +78,13 @@ const minifyHTML = (page: { content: string }): void => {
 
 site
   .ignore("README.md")
+  .use(resolveUrls())
+  .use(
+    slugifyUrls({
+      lowercase: true,
+      alphanumeric: true,
+    })
+  )
   .use(
     postcss({
       extensions: [".css", ".windi.css"],
@@ -114,6 +124,7 @@ site
       languages: ["ts"],
     })
   )
+  .use(katex())
   .use(jsx())
   .use(esbuild())
   .process([".html"], minifyHTML);

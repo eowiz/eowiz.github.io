@@ -1,5 +1,3 @@
-import type { PageData } from "lume/core.ts";
-
 export interface Data {
   siteMetadata: {
     title: string;

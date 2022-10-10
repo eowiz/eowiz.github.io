@@ -1,4 +1,4 @@
-import { format } from "https://deno.land/std@0.158.0/datetime/mod.ts";
+import { PageHelpers } from "lume/core.ts";
 import type { PageData } from "lume/core.ts";
 import type { Data } from "../../_data.ts";
 
@@ -8,14 +8,17 @@ export interface PostPageData extends PageData, Data {
 
 export const layout = "layouts/main.tsx";
 
-export default ({ title, date, children, comp, toc }: PostPageData) => (
-  <main className="post flex max-w-5xl mx-auto px-6 my-8">
+export default (
+  { title, date, children, comp, toc }: PostPageData,
+  filters: PageHelpers
+) => (
+  <main className="post flex max-w-5xl">
     <article className="max-w-2xl mx-auto">
       <section className="mb-6">
         <h1>{title}</h1>
         <div className="flex mb-2 items-center text-gray-800">
           <span className="ion-calendar mr-2"></span>
-          <span>{format(date, "yyyy年MM月dd日")}</span>
+          <span>{filters.date(date, "yyyy年MM月dd日")}</span>
         </div>
       </section>
       <section className="mb-6">{children}</section>

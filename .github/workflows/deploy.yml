@@ -6,26 +6,20 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
-    strategy:
-      matrix:
-        node-version: [18.x]
     steps:
       - uses: actions/checkout@v2
-        with:
-          submodules: true
 
-      - name: Setup Hugo
-        uses: peaceiris/actions-hugo@v2
+      - name: Setup Deno
+        uses: denoland/setup-deno@v1
         with:
-          hugo-version: '0.104.0'
-          extended: true
+          deno-version: "1.26.1"
 
       - name: Build
-        run: hugo --minify
+        run: deno task build
 
       - uses: actions/upload-pages-artifact@v1
         with:
-          path: public
+          path: _site
 
   deploy:
     needs: build
