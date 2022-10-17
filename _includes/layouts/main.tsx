@@ -3,7 +3,13 @@ import type { Data } from "../../_data.ts";
 
 export interface MainPageData extends PageData, Data {}
 
-export default ({ title, description, siteMetadata, children, comp }: MainPageData) => {
+export default ({
+  title,
+  description,
+  siteMetadata,
+  children,
+  comp,
+}: MainPageData) => {
   const titleText =
     title && title !== "undefined"
       ? `${title} | ${siteMetadata.title}`
@@ -32,7 +38,9 @@ export default ({ title, description, siteMetadata, children, comp }: MainPageDa
               __html: comp.header(),
             }}
           ></div>
-          <div className="mx-auto my-8 mb-auto px-6">{children}</div>
+          <div className="mx-auto mt-8 mb-auto px-6 w-full max-w-5xl">
+            {children}
+          </div>
           <div dangerouslySetInnerHTML={{ __html: comp.footer() }}></div>
         </div>
       </body>

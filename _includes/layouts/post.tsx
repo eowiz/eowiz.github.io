@@ -12,8 +12,8 @@ export default (
   { title, date, children, comp, toc }: PostPageData,
   filters: PageHelpers
 ) => (
-  <main className="post flex max-w-5xl">
-    <article className="max-w-2xl mx-auto">
+  <main className="post flex justify-center mx-auto">
+    <article className="max-w-2xl flex-auto">
       <section className="mb-6">
         <h1>{title}</h1>
         <div className="flex mb-2 items-center text-gray-800">
