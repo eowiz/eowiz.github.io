@@ -1,5 +1,6 @@
 ---
 title: Amazon Music HD アニソンまとめ (更新中)
+description: Amazon Music HD でハイレゾ配信しているアニソンまとめ (更新中)
 date: 2022-10-01
 tag:
   - オーディオ

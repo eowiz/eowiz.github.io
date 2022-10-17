@@ -3,7 +3,7 @@ import type { Data } from "../../_data.ts";
 
 export interface MainPageData extends PageData, Data {}
 
-export default ({ title, siteMetadata, children, comp }: MainPageData) => {
+export default ({ title, description, siteMetadata, children, comp }: MainPageData) => {
   const titleText =
     title && title !== "undefined"
       ? `${title} | ${siteMetadata.title}`
@@ -15,7 +15,7 @@ export default ({ title, siteMetadata, children, comp }: MainPageData) => {
         <meta httpEquiv="content-type" content="text/html; charset=utf-8" />
         <meta name="viewport" content="width=device-width,initial-scale=1" />
         <title>{titleText}</title>
-        <meta name="description" content="" />
+        <meta name="description" content={description} />
         <link rel="stylesheet" href="/windi.css" />
         <link rel="stylesheet" href="/styles.css" />
         <link rel="stylesheet" href="/post.css" />

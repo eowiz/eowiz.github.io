@@ -1,5 +1,6 @@
 ---
 title: Clear Mg Pro
+description: Clear Mg Pro 買った感想。
 date: 2022-09-25
 tags:
   - オーディオ
