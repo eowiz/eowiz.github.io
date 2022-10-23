@@ -121,7 +121,7 @@ site
   .use(date())
   .use(
     prism({
-      languages: ["ts"],
+      languages: ["java", "ts"],
     })
   )
   .use(katex())
